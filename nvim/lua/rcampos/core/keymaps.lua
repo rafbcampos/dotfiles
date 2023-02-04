@@ -5,9 +5,6 @@ vim.g.mapleader = " "
 -- General Keymaps
 ---------------------
 
--- use jk to exit insert mode
-vim.keymap.set("i", "jk", "<ESC>")
-
 -- clear search highlights
 vim.keymap.set("n", "<leader>nh", ":nohl<CR>")
 
