@@ -251,6 +251,11 @@ _G.packer_plugins = {
     path = "/Users/rafaelcampos/.local/share/nvim/site/pack/packer/start/vim-ReplaceWithRegister",
     url = "https://github.com/inkarkat/vim-ReplaceWithRegister"
   },
+  ["vim-illuminate"] = {
+    loaded = true,
+    path = "/Users/rafaelcampos/.local/share/nvim/site/pack/packer/start/vim-illuminate",
+    url = "https://github.com/RRethy/vim-illuminate"
+  },
   ["vim-maximizer"] = {
     loaded = true,
     path = "/Users/rafaelcampos/.local/share/nvim/site/pack/packer/start/vim-maximizer",
