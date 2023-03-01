@@ -26,6 +26,14 @@ if not status then
 	return
 end
 
+-- Jenkinsfile
+vim.cmd([[ 
+  augroup jenkinsfile
+    autocmd!
+    autocmd BufNewFile,BufRead Jenkinsfile set filetype=groovy
+  augroup end
+]])
+
 -- add list of plugins to install
 return packer.startup(function(use)
 	-- packer can manage itself
@@ -33,7 +41,7 @@ return packer.startup(function(use)
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
-	use("navarasu/onedark.nvim") -- preferred colorscheme
+	use("folke/tokyonight.nvim") -- preferred colorscheme
 
 	use("lukas-reineke/indent-blankline.nvim") -- Add indentation guides even on blank lines
 
@@ -120,11 +128,39 @@ return packer.startup(function(use)
 	-- rust
 	use("simrat39/rust-tools.nvim")
 
+	-- mustache
+	use("mustache/vim-mustache-handlebars")
+
 	-- which key
 	use("folke/which-key.nvim")
 
-	-- higlighting other uses of the word under cursor
-	use("RRethy/vim-illuminate")
+	-- multicursor
+	use("terryma/vim-multiple-cursors")
+
+	-- lua development
+	use("folke/neodev.nvim")
+
+	-- debugging
+	use("mfussenegger/nvim-dap")
+	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+	use("theHamsta/nvim-dap-virtual-text")
+
+	-- bufferline
+	use({ "akinsho/bufferline.nvim", requires = "nvim-tree/nvim-web-devicons" })
+
+	-- word hightlighting
+	use("rrethy/vim-illuminate")
+
+	-- terminal
+	use({
+		"akinsho/toggleterm.nvim",
+		config = function()
+			require("toggleterm").setup()
+		end,
+	})
+
+	-- lazygit
+	use("kdheepak/lazygit.nvim")
 
 	if packer_bootstrap then
 		require("packer").sync()
