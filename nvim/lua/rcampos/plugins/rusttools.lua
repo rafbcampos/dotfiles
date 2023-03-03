@@ -12,5 +12,18 @@ rust_tools.setup({
 			-- Code action groups
 			vim.keymap.set("n", "<Leader>ra", rust_tools.code_action_group.code_action_group, { buffer = bufnr })
 		end,
+		settings = {
+			["rust-analyzer"] = {
+				checkOnSave = {
+					command = "clippy",
+				},
+			},
+		},
+	},
+	dap = {
+		adapter = {
+			type = "executable",
+			command = "~/.vscode/extensions/lanza.lldb-vscode-0.2.3/bin/darwin/bin/lldb-vscode",
+		},
 	},
 })

@@ -16,7 +16,11 @@ vim.o.updatetime = 250
 vim.wo.signcolumn = "yes"
 
 -- line wrapping
-vim.opt.wrap = false -- disable line wrapping
+vim.opt.textwidth = 100 -- wrap lines at 100 characters
+vim.opt.wrap = true -- enable line wrapping
+
+-- scrolling offset
+vim.opt.scrolloff = 8 -- keep 8 lines above and below cursor when scrolling
 
 -- search settings
 vim.opt.ignorecase = true -- ignore case when searching
