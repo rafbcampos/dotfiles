@@ -152,12 +152,7 @@ return packer.startup(function(use)
 	use("rrethy/vim-illuminate")
 
 	-- terminal
-	use({
-		"akinsho/toggleterm.nvim",
-		config = function()
-			require("toggleterm").setup()
-		end,
-	})
+	use("akinsho/toggleterm.nvim")
 
 	-- lazygit
 	use("kdheepak/lazygit.nvim")

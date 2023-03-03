@@ -16,6 +16,7 @@ dap.adapters.node2 = {
 	command = "node",
 	args = { os.getenv("HOME") .. "/dev/microsoft/vscode-node-debug2/out/src/nodeDebug.js" },
 }
+
 dap.configurations.javascript = {
 	{
 		name = "Launch",
