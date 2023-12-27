@@ -1,0 +1,13 @@
+brew "mas"
+brew "chezmoi"
+brew "btop"
+brew "neovim"
+brew "lazygit"
+brew "gcc"
+brew "ripgrep"
+brew "fd"
+brew "node"
+brew "bazelisk"
+
+cask "brave-browser"
+cask "alacritty"
